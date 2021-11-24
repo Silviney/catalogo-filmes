@@ -1,0 +1,9 @@
+
+.sf-destacados .card {
+	height: 100%;	
+}
+
+.sf-destacados .card img {
+    height:300px;
+    object-fit: auto;
+}
