@@ -18,7 +18,7 @@ public class CatalogoVideosService {
 	}
 
 	public List<Videos> buscarVideos(){
-		return catalogoVideosRepository.findAll();
+		return catalogoVideosRepository.buscarTodosOrdenados();
 	}
 	
 }

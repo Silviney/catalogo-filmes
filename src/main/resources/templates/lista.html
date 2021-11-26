@@ -27,6 +27,9 @@
 			  		<img th:src="${video.imagemUrl}" class="card-img-top" alt="...">
 			  		<div class="card-body">
 					    <h5 th:text="${video.nome}" class="card-title"></h5>
+					    <p>
+					    <span class="badge bg-warning text-dark" th:text="${video.produtor.nome}"></span>
+					    </p>
 					    <p th:text="${video.descricao}" class="card-text"></p>
 			  		</div>
 			  		<div class="card-footer text-muted">

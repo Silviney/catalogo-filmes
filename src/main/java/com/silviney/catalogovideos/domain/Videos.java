@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -16,6 +17,8 @@ public class Videos {
 	private String nome;
 	private String descricao;
 	private String imagemUrl;
+	@ManyToOne
+	private Produtor produtor;
 
 	public Integer getId() {
 		return id;
@@ -47,5 +50,13 @@ public class Videos {
 	
 	public void setImagemUrl(String imagemUrl) {
 		this.imagemUrl = imagemUrl;
+	}
+
+	public Produtor getProdutor() {
+		return produtor;
+	}
+
+	public void setProdutor(Produtor produtor) {
+		this.produtor = produtor;
 	}
 }
