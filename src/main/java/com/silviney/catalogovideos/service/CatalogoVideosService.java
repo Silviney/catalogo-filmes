@@ -21,4 +21,12 @@ public class CatalogoVideosService {
 		return catalogoVideosRepository.buscarTodosOrdenados();
 	}
 	
+	public List<Videos> buscarPorProdutor(int produtorId){
+		return catalogoVideosRepository.buscarPorProdutor(produtorId);
+	}
+	
+	public List<Videos> buscar (String consulta) {
+		return catalogoVideosRepository.buscar(consulta);
+	}
+	
 }

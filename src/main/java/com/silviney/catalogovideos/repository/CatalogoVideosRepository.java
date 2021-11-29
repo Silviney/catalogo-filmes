@@ -12,4 +12,10 @@ public interface CatalogoVideosRepository extends JpaRepository<Videos, Integer>
 	@Query("from Videos v order by v.nome")
 	List<Videos> buscarTodosOrdenados();
 	
+	@Query("from Videos v where v.produtor.id =?1 order by v.nome")
+	List<Videos> buscarPorProdutor(int produtorId);
+
+	@Query("from Videos v where v.nome like %?1%")
+	List<Videos> buscar(String consulta);
 }
+
