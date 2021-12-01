@@ -12,7 +12,7 @@ import javax.persistence.Table;
 public class Videos {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	private String nome;
 	private String descricao;
@@ -59,4 +59,12 @@ public class Videos {
 	public void setProdutor(Produtor produtor) {
 		this.produtor = produtor;
 	}
+
+	@Override
+	public String toString() {
+		return "Videos [id=" + id + ", nome=" + nome + ", descricao=" + descricao + ", imagemUrl=" + imagemUrl
+				+ ", produtor=" + produtor.getId() + "]";
+	}
+	
+	
 }

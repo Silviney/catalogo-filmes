@@ -29,4 +29,8 @@ public class CatalogoVideosService {
 		return catalogoVideosRepository.buscar(consulta);
 	}
 	
+	public Videos salvar (Videos videos) {
+		return catalogoVideosRepository.save(videos);
+	}
+	
 }
